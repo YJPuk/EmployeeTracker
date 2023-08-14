@@ -263,7 +263,30 @@ function updateRole() {
 });
 };
 
+//Delete Employee
+function deleteEmployee() {
+    inquirer.prompt([
+        {
+            name: "employee_id",
+            type: "number",
+            message: "Please enter the id number of the employee you want to delete from the database (numbers only)"
+        }
+    ]).then(function (answer) {
+        db.query("DELETE FROM employee WHERE id = ?", [answer.employee_id], function (err, data) {
+            if (err) throw err;
+            console.log("Succcessfully Deleted");
 
+            db.query(`SELECT * FROM employee`, (err, result) => {
+                if (err) {
+                    res.status(500).json({ error: err.message })
+                    startTracker();
+                }
+                console.table(result);
+                startTracker();
+            });
+        })
+});
+};
 
 
 // Default response for any other request (Not Found)
