@@ -39,6 +39,7 @@ function startTracker() {
             "Add Roles", 
             "Add Employees",
             "Update an employees' Role",
+            "Delete an Employee from Database",
           ]
       })
       .then(function(answer) {
@@ -49,27 +50,24 @@ function startTracker() {
         }
         else if(answer.selection === "View All Roles") {
           viewRoles();
-    
         } 
         else if(answer.selection === "View All Employees") {
           viewEmployees();
-    
         }
         else if(answer.selection === "Add Departments") {
           addDepartments();
-    
         }
         else if(answer.selection === "Add Roles") {
           addRoles();
-    
         }
         else if(answer.selection === "Add Employees") {
           addEmployees();
-    
         }
         else if(answer.selection === "Update an employees' Role") {
           updateRole();
-    
+        }
+        else if(answer.selection === "Delete an Employee from Database") {
+          deleteEmployee();
         }else{
           db.end();
         }
@@ -239,9 +237,9 @@ function addEmployees() {
 function updateRole() {
     inquirer.prompt([
         {
-            name: "first_name",
-            type: "input",
-            message: "Please enter the first name of the employee you want to update"
+            name: "id",
+            type: "number",
+            message: "Please enter the id number of the employee you want to update (numbers only)"
         },
         {
             name: "role_id",
@@ -249,7 +247,7 @@ function updateRole() {
             message: "Please enter the employee's new role id (numbers only)"
         }
     ]).then(function (answer) {
-        db.query("UPDATE employee SET role_id = ? WHERE first_name = ?", [answer.manager_id, answer.first_name], function (err, data) {
+        db.query("UPDATE employee SET role_id = ? WHERE id = ?", [answer.role_id, answer.id], function (err, data) {
             if (err) throw err;
             console.log("Successfully updated");
 
