@@ -1,5 +1,40 @@
 # 12 SQL: Employee Tracker
 
+<hr>
+
+# Walkthrough Video link: 
+https://github.com/YJPuk/
+
+# Walkthrough Gif (Shows walkthrough functionality and test):
+![User Inputs via CLI.](./example/walkthrough.gif)
+
+<hr>
+
+Description
+
+As coding student I'm trying to create a simple database that utilizes Node.js using Inquirer and mySQL2 to match the Acceptance Criteria listed in the task below. 
+
+The Employee Tracker includes
+<h4>&#x2022; A command-line application that accepts user inputs </h4> 
+<h4>&#x2022; You are presented with the options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role </h4> 
+
+<h4>&#x2022; Upon choosing view all departments, view all roles, view all employees you are presented with formatted tables showing the corresponding data </h4> 
+<h4>&#x2022; By choosing view all departments you get department names and department ids </h4> 
+<h4>&#x2022; By choosing view all roles you get job title, role id, the department id that role belongs to, and the salary for that role </h4> 
+<h4>&#x2022; By choosing view all employees you get employee ids, first names, last names, job titles, departments, salaries, and manager id that the employees report to </h4> 
+
+<h4>&#x2022; Upon choosing add a department, add a role and add an employee you are able to input data that is added to the database </h4> 
+<h4>&#x2022; By choosing add a department you are prompted to enter the name of the department and that department is added to the database </h4>
+<h4>&#x2022; By choosing add a role you are prompted to enter the name, salary, and department for the role and that role is added to the database  </h4>
+<h4>&#x2022; By choosing add an employee you are prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database </h4>
+
+<h4>&#x2022; Upon choosing to update an employee's role you are prompted to select an employee to update and their new role and this information is updated in the database  </h4>
+<h4>&#x2022; When you choose to delete an employee you are prompted for the employee's id number and the employee will be deleted from the database </h4>
+
+This was built using Node.js, Javascript, Inquirer, mySQL and love.
+
+<hr>
+
 ## Your Task
 
 Developers frequently have to create interfaces that allow non-developers to easily view and interact with information stored in databases. These interfaces are called **content management systems (CMS)**. Your assignment this week is to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.

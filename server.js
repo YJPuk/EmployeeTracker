@@ -274,7 +274,7 @@ function deleteEmployee() {
     ]).then(function (answer) {
         db.query("DELETE FROM employee WHERE id = ?", [answer.employee_id], function (err, data) {
             if (err) throw err;
-            console.log("Succcessfully Deleted");
+            console.log("Succcessfully Deleted!");
 
             db.query(`SELECT * FROM employee`, (err, result) => {
                 if (err) {
