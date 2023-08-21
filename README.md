@@ -3,7 +3,7 @@
 <hr>
 
 # Walkthrough Video link: 
-https://github.com/YJPuk/EmployeeTracker/blob/main/example/Walkthrough.webm
+[Walkthrough](https://drive.google.com/file/d/108PKcJSJtvqpt8fEmZQ_lO1F7WF0hVtJ/view?usp=sharing)
 
 # Walkthrough Gif (Shows walkthrough functionality and test):
 ![User Inputs via CLI.](./example/walkthrough.gif)
